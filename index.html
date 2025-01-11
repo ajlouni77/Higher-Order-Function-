@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const DemoArr = [1, 2, 3];
+
+
+      // Q1
+      function arrFor(array) {
+        let newArr = [];
+        for (let i = 0; i < array.length; i++) {
+          newArr.push(Math.pow(2, array[i]));
+        }
+        return newArr;
+      }
+
+      function ForEach(array) {
+        let result = [];
+        array.forEach((num) => {
+          result.push(Math.pow(2, num));
+        });
+        return result;
+      }
+
+      function MapA(array) {
+        return array.map((element) => Math.pow(2, element));
+      }
+
+      console.log(arrFor(DemoArr));
+      console.log(ForEach(DemoArr));
+      console.log(MapA(DemoArr));
+
+      // Q2
+
+      let arr2 = [1, 2, 3, "Rawan"];
+
+      function dataType(array) {
+        return array.map((element) => {
+          if (typeof element === "number" && element % 2 === 0) {
+            return "even";
+          } else if (typeof element === "number" && element % 2 !== 0) {
+            return "odd";
+          } else {
+            return "N/A";
+          }
+        });
+      }
+      console.log(dataType(arr2));
+
+      // Q3
+
+      const names = ["Rawan", "Wesam", "Hind", "Muhammad", "Esraa", "Dareen"];
+
+      names.forEach((name) => console.log(name));
+
+      // Q4
+      const inputArray = [1, 3, 5, 15, 7, 9, 10];
+
+      function fizzBuzz(array) {
+        return array.map((number) => {
+          if (number % 3 === 0 && number % 5 === 0) {
+            return "Fizz Buzz";
+          } else if (number % 3 === 0) {
+            return "Fizz";
+          } else if (number % 5 === 0) {
+            return "Buzz";
+          } else {
+            return number;
+          }
+        });
+      }
+      console.log(fizzBuzz(inputArray));
+    </script>
+  </body>
+</html>
